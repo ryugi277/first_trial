@@ -103,7 +103,7 @@ def cleansing_upload():
     db_connection = create_connection()
     insert_upload_result_to_db(db_connection, df_cleansing)
     print("Upload result to database success!")
-    result_response = df_cleansing.T.to_dict(orient='records')
+    result_response = df_cleansing.T.to_dict()
     return jsonify(result_response)
 
 if __name__ == '__main__':
